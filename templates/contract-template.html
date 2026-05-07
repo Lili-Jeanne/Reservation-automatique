@@ -1,0 +1,28 @@
+<article style="font-family: Arial, sans-serif; line-height: 1.5; max-width: 700px; margin: 0 auto;">
+  <h1>Contrat de location saisonniere</h1>
+  <p><strong>Reference:</strong> {{bookingId}}</p>
+  <p><strong>Genere le:</strong> {{generatedAt}}</p>
+
+  <h2>Parties</h2>
+  <p><strong>Locataire:</strong> {{tenantName}} ({{tenantEmail}})</p>
+  <p><strong>Hebergement:</strong> {{giteName}}</p>
+
+  <h2>Sejour</h2>
+  <p>Arrivee: {{startDate}}</p>
+  <p>Depart: {{endDate}}</p>
+  <p>Nuits: {{nights}}</p>
+
+  <h2>Montants</h2>
+  <ul>
+    <li>Location: {{baseTotal}} EUR</li>
+    <li>Frais de menage: {{cleaningFee}} EUR</li>
+    <li>Frais de service: {{serviceFee}} EUR</li>
+    <li><strong>Total: {{total}} EUR</strong></li>
+  </ul>
+
+  <h2>Clauses</h2>
+  <p>
+    Le paiement confirme la reservation. En cas d'annulation, les conditions indiquees
+    dans les CGV du proprietaire s'appliquent. Chaque partie certifie l'exactitude des informations.
+  </p>
+</article>

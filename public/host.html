@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace hote - calendrier</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Espace hote</h1>
+      <section class="card">
+        <h2>Calendrier disponibilites (type Airbnb)</h2>
+        <div class="host-controls">
+          <a class="action-link danger" href="/host/logout">Deconnexion</a>
+          <label>
+            Prix/nuit (EUR)
+            <input type="number" id="host-price" min="0" step="0.01" required />
+          </label>
+          <label>
+            <input type="checkbox" id="host-available" checked />
+            Disponible
+          </label>
+          <button id="host-apply">Appliquer a la plage selectionnee</button>
+          <button id="host-clear" type="button">Reinitialiser selection</button>
+        </div>
+        <div class="selection-summary" id="host-selection-summary">
+          Selection : <strong>—</strong>
+        </div>
+        <div class="month-nav">
+          <button id="host-prev" type="button">Mois precedent</button>
+          <button id="host-next" type="button">Mois suivant</button>
+        </div>
+        <div id="host-calendar" class="airbnb-calendar"></div>
+        <p class="hint">
+          Clique d'abord sur la <strong>date de depart</strong>, puis sur la <strong>date de fin</strong>. Ensuite
+          clique sur <strong>Appliquer</strong> pour definir <strong>prix</strong> et <strong>disponibilite (oui/non)</strong>.
+        </p>
+      </section>
+    </main>
+    <script src="/host.js"></script>
+  </body>
+  </html>
+

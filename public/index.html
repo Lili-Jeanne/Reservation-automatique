@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation de gites - locataire</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Reservation de gites</h1>
+
+      <section class="card">
+        <h2>Choisir vos dates (type Airbnb)</h2>
+        <div class="guest-meta">
+          <p id="guest-selection-summary">Selection : <strong>—</strong></p>
+          <p id="guest-availability-summary">Disponibilite : —</p>
+        </div>
+        <div class="month-nav">
+          <button id="guest-prev" type="button">Mois precedent</button>
+          <button id="guest-next" type="button">Mois suivant</button>
+        </div>
+        <div id="guest-calendar" class="airbnb-calendar"></div>
+        <p class="hint">Clique d'abord sur la date de depart, puis sur la date de fin.</p>
+      </section>
+
+      <section class="card">
+        <h2>Creation de reservation</h2>
+        <form id="booking-form">
+          <input type="text" id="book-customer-name" placeholder="Nom client" required />
+          <input type="email" id="book-customer-email" placeholder="Email client" required />
+          <button id="booking-submit" type="submit">Reserver et payer</button>
+        </form>
+        <p id="booking-result"></p>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+  </html>

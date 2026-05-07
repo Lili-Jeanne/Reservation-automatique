@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion hote</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Connexion hote</h1>
+
+      <section class="card">
+        <form method="POST" action="/host/login" style="max-width: 420px">
+          <label>
+            Identifiant
+            <input name="username" type="text" autocomplete="username" required />
+          </label>
+
+          <label style="margin-top: 0.6rem; display: block">
+            Mot de passe
+            <input name="password" type="password" autocomplete="current-password" required />
+          </label>
+
+          <button type="submit" style="margin-top: 0.8rem">Se connecter</button>
+        </form>
+
+        <p id="login-error" style="color: #b91c1c; font-weight: 600"></p>
+
+        <p class="hint">
+          Astuce dev : modifie `HOST_BASIC_USER` / `HOST_BASIC_PASS` dans `.env`.
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const err = params.get("error");
+      if (err) {
+        document.getElementById("login-error").textContent = "Identifiants invalides.";
+      }
+    </script>
+  </body>
+  </html>
+
